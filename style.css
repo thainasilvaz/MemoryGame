@@ -1,0 +1,110 @@
+*{
+  box-sizing: border-box; /*fazendo com que dimensões definidas sejam aplicadas a todas as partes de um elemento: conteúdo, preenchimento e bordas*/
+}
+
+/****/
+/* 0. Variáveis
+/* 1. Tags
+/* 2. Body
+/* 3. Jogo
+/* 4. Footer
+/****/
+
+/****/
+/* 0. Variáveis
+/****/
+
+/****/
+/* 1. Tags
+/****/
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/foggy_birds.png);
+}
+
+/****/
+/* 2. Body
+/****/
+
+.cards-container{
+  background-color: white;
+  width: 758px;
+  height: 540px;
+  margin: auto;
+  margin-top: 130px;
+  display: flex; /*Os elementos filhos diretos de um flex container tornam-se automaticamente itens flexíveis*/
+  flex-wrap: wrap;
+  border: 5px solid rgb(226, 225, 225);
+  padding: 10px;
+  align-content: flex-start; /*alinha as linhas de cartas no início do contêiner*/
+}
+
+/****/
+/* 3. Jogo
+/****/
+
+.card {
+  width: 100px;
+  height: 150px;
+  background-color:rgb(41, 187, 206);
+  margin: 10px;
+  margin-left: 11px;
+  float: left;
+  cursor: pointer;
+  font-size: 4rem;
+  border-radius: 10px;
+  /*alinhando o conteúdo das cartas ao centro*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#start {
+  display: flex;
+  margin-bottom: -110px;
+  margin-top: 30px;
+  margin-left: auto; /* Centraliza horizontalmente o botão */
+  margin-right: auto;
+  font-size: 1.9rem;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 2px solid rgb(226, 225, 225);
+  background-color: rgb(226, 225, 225);
+}
+
+#start:hover{
+  background-color: rgb(165, 165, 165);
+  color: white;
+}
+
+#placar {
+  margin-top: 60px; /* Espaçamento superior */
+  margin-bottom: -110px;
+  margin-left: 300px;
+  font-size: 2rem;
+}
+
+@keyframes flip { /* criando a animação flip */
+  from {
+    transform: rotateY(0); /* começa com uma rotação de 0 graus em y */
+  }
+  to {
+    transform: rotateY(180deg) scaleX(-1); /* termina com uma rotação de 180 graus em y (vira totalmente) */
+  }
+}
+
+
+.virada {
+  animation: flip 0.4s ease; /* o ease faz com que a animação comece devagar, acelere no meio e desacelere no final (sensação de suavidade) */
+}
+
+
+
+/****/
+/* 3. Footer
+/****/
